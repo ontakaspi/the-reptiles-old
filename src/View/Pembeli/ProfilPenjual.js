@@ -192,7 +192,7 @@ class ProfilUser extends React.Component{
                     <Col>
                     <br/>
                     <div>
-                        <img align="right"style={{maxWidth:"70%"}} src={`https://be.thereptiles.muezabusiness.com/be1${User.Foto}`} alt="gambar"/>
+                        <img align="right"style={{maxWidth:"70%"}} src={`https://be.thereptiles.muezabusiness.com/${User.Foto}`} alt="gambar"/>
                     </div>
                     </Col>
                     </Row>
@@ -218,7 +218,7 @@ class ProfilUser extends React.Component{
                                   <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
-                                    image={`https://be.thereptiles.muezabusiness.com/be1${produks.image}`}
+                                    image={`https://be.thereptiles.muezabusiness.com/${produks.image}`}
                                     title="gambar"
                                     alt="gambar"
                                 />

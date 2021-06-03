@@ -117,7 +117,7 @@ class CariKota extends React.Component{
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
-                                    image={`https://be.thereptiles.muezabusiness.com/be1${users.Foto}`}
+                                    image={`https://be.thereptiles.muezabusiness.com/${users.Foto}`}
                                     title="gambar"
                                     alt="gambar"
                                 />

@@ -37,14 +37,21 @@ const style = theme=>({
 class cariproduk extends React.Component{
     constructor(){
         super()
+        const search = window.location.search; // could be '?foo=bar'
+        const params = new URLSearchParams(search);
+        var Cari = params.get('Cari'); // bar
+
+        if (Cari == null || Cari == ''){
+            var Cari = 'all'
+        }
         this.state={
             items:[],
             produk:[],
             ModalProdukPreview : false,
             ModalProdukAddToCart : false,
             ModalLaporkan : false,
-            Cari:'Beras',
-            StatusBarang:'Blokir',
+            Cari:Cari,
+            StatusBarang:'aman',
             form:{
                 id_produk:'',
                 id_user:'',
@@ -54,7 +61,7 @@ class cariproduk extends React.Component{
                 Price:'',
                 Deskripsi: '',
                 status_keranjang: 'dalam keranjang',
-                StatusBarang:'Blokir',
+                StatusBarang:'aman',
                 typeModal:'',
             }
         }
@@ -204,7 +211,7 @@ class cariproduk extends React.Component{
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
-                                    image={`https://be.thereptiles.muezabusiness.com/be1${produks.image}`}
+                                    image={`https://be.thereptiles.muezabusiness.com/${produks.image}`}
                                     title="gambar"
                                     alt="gambar"
                                 />

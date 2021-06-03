@@ -71,7 +71,7 @@ class Profil extends React.Component{
                             <Col>
                             <br/>   
                             <div>
-                                <img align="right"style={{width:"70%"}} src={`https://be.thereptiles.muezabusiness.com/be1${User.Foto}`} alt="gambar"/>
+                                <img align="right"style={{width:"70%"}} src={`https://be.thereptiles.muezabusiness.com/${User.Foto}`} alt="gambar"/>
                             </div>
                             </Col>
                             </Row>

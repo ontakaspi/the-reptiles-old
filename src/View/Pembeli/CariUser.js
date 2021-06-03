@@ -33,9 +33,16 @@ const style = theme=>({
 class CariUser extends React.Component{
     constructor(){
         super()
+        const search = window.location.search; // could be '?foo=bar'
+        const params = new URLSearchParams(search);
+        var Cari = params.get('Cari'); // bar
+
+        if (Cari == null || Cari == ''){
+            var Cari = 'all'
+        }
         this.state={
             items:[],
-            Cari:'',
+            Cari:Cari,
         }
         this.onSubmit = this.onSubmit.bind(this)
         this.onChange = this.onChange.bind(this)
@@ -110,7 +117,7 @@ class CariUser extends React.Component{
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
-                                    image={`https://be.thereptiles.muezabusiness.com/be1${users.Foto}`}
+                                    image={`https://be.thereptiles.muezabusiness.com/${users.Foto}`}
                                     title="gambar"
                                     alt="gambar"
                                 />

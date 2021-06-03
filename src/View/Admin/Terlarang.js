@@ -145,7 +145,7 @@ class Blokir extends Component{
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
-                                    image={`https://be.thereptiles.muezabusiness.com/be1${produks.image}`}
+                                    image={`https://be.thereptiles.muezabusiness.com/${produks.image}`}
                                     title="gambar"
                                     alt="gambar"
                                 />
